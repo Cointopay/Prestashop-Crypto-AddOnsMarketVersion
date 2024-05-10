@@ -239,12 +239,6 @@ class CointopayCallbackModuleFrontController extends ModuleFrontController
                 $this->setTemplate('ctp_payment_cancel.tpl');
             }
         }
-       /*
-        if (_PS_VERSION_ >= '1.7') {
-            $this->setTemplate('module:cointopay/views/templates/front/ctp_payment_callback.tpl');
-        } else {
-            $this->setTemplate('ctp_payment_callback.tpl');
-        }*/
     }
 
     private function logError($message, $cart_id)
