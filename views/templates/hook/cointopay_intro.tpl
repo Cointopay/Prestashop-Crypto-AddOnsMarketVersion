@@ -24,8 +24,8 @@
  *}
 
 <section>
-  <input type="hidden" id="merchantId" value="{$merchant_id}" />
-  <input type="hidden" id="selectedCurrency" value="{$selected_currency}" />
+  <input type="hidden" id="merchantId" value="{$merchant_id|escape:'htmlall':'UTF-8'}" />
+  <input type="hidden" id="selectedCurrency" value="{$selected_currency|escape:'htmlall':'UTF-8'}" />
   <p>
     {l s='Cryptocurrency payments are processed by Cointopay - over 200 tokens supported.' d='cointopay' mod='cointopay'}
   </p>
@@ -64,7 +64,7 @@ function getCoin(id) {
         ajax: 1,
         merchant: id
     };
-    var url = '{$coins_ajax_link}'
+    var url = '{$coins_ajax_link|escape:'htmlall':'UTF-8'}'
     if (url !== '') {
         url = url.replaceAll('&amp;', '&')
     }
