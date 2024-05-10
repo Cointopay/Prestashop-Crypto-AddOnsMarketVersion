@@ -461,8 +461,8 @@ class Cointopay extends PaymentModule
             $this->smarty->assign('getparams', $_REQUEST);
             $this->context->smarty->assign([
                 'ctpAjaxurl' => $this->context->link->getModuleLink($this->name, 'cointopaywaiting', [], true),
-                'ctpCllbackurl' => $this->context->link->getModuleLink($this->name, 'callback', [], true), 
-                'file_exists' => $file_exists
+                'ctpCllbackurl' => $this->context->link->getModuleLink($this->name, 'callback', [], true),
+                'file_exists' => $file_exists,
             ]);
 
             return $this->context->smarty->fetch('module:cointopay/views/templates/hook/ctp_success_callback.tpl');
